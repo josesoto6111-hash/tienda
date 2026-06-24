@@ -1,0 +1,57 @@
+/* 1. Reseteo básico para que el navegador no agregue márgenes extra */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* 2. Estilo del Menú (Centrado y Profesional) */
+header {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center; /* Esto centra el menú */
+}
+
+nav ul li {
+    display: inline-block; /* Pone los elementos uno al lado del otro */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Cambia a azul al pasar el mouse */
+}
+
+/* 3. Estilo para el contenido principal */
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
+    text-align: center;
+}
+
+/* 4. Diseño Responsivo (Para tablets y celulares) */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* En pantallas pequeñas, el menú se pone en vertical */
+        margin: 10px 0;
+    }
+}
