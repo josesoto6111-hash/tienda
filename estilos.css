@@ -1,8 +1,36 @@
+/* Configuración Global */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background-color: #eef2f5; color: #333; line-height: 1.6; }
+
+/* Menú Superior */
+header { background-color: #2c3e50; padding: 1.5rem; }
+nav ul { list-style: none; text-align: center; }
+nav ul li { display: inline-block; margin: 0 20px; }
+nav ul li a { text-decoration: none; color: #ecf0f1; font-weight: 600; }
+
+/* Contenedor Principal (Grid para las tarjetas) */
+main { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+
+/* Estilo de las Tarjetas */
+.contenedor-tarjetas {
+    display: flex; /* Alinea las tarjetas */
+    flex-wrap: wrap; /* Permite que salten a la siguiente línea en móviles */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: center;
+}
+
 .tarjeta {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 600px;
-    background-color: white;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 48%; /* Dos tarjetas por fila */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover { transform: translateY(-5px); }
+
+/* Responsive: Para celulares, que sea una tarjeta por fila */
+@media (max-width: 768px) {
+    .tarjeta { width: 100%; }
 }
